@@ -22,6 +22,19 @@ public class BaseTest {
 		return url;
 	}
 	
+	public int[] addArray1(int[] a,int[] b) {
+		
+		int[] result = new int[a.length];
+		
+		for(int i=0;i<result.length;i++) {
+			
+			result[i]=a[i]+b[i];
+			
+			//System.out.println(result[i]);
+		}
+		return result;
+	}
+	
 	
 
 }
