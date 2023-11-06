@@ -1,5 +1,7 @@
 package com.tests;
 
+import java.util.List;
+
 public class BaseTest {
 	
 	public String selectEnv(String env) {
@@ -34,7 +36,23 @@ public class BaseTest {
 		}
 		return result;
 	}
-	
+
+	public List listDemo(List lst1) {
+
+
+		
+		/*
+		 * for(int i=0;i<lst1.size();i++) { System.out.println(lst1.get(i)); }
+		 */
+		
+		//lst1.remove(0);
+		//System.out.println(lst);
+		
+		/*
+		 * for(int i=0;i<lst1.size();i++) { System.out.println(lst1.get(i)); }
+		 */
+		return lst1;
+	}
 	
 
 }
