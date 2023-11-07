@@ -3,7 +3,7 @@ package com.tests;
 import java.util.HashMap;
 import java.util.List;
 
-public class BaseTest {
+abstract class BaseTest2 {
 	
 	protected String selectEnv(String env) {
 		//String env="qa";
