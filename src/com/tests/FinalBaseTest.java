@@ -3,10 +3,7 @@ package com.tests;
 import java.util.HashMap;
 import java.util.List;
 
-abstract class BaseTest2 {
-	
-	public abstract void display();
-	public abstract void show();
+final public class FinalBaseTest {
 	
 	protected String selectEnv(String env) {
 		//String env="qa";
@@ -42,6 +39,7 @@ abstract class BaseTest2 {
 	}
 
 	public List listDemo(List lst1) {
+
 		return lst1;
 	}
 	

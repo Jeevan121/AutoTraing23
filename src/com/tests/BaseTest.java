@@ -40,18 +40,6 @@ public class BaseTest {
 
 	public List listDemo(List lst1) {
 
-
-		
-		/*
-		 * for(int i=0;i<lst1.size();i++) { System.out.println(lst1.get(i)); }
-		 */
-		
-		//lst1.remove(0);
-		//System.out.println(lst);
-		
-		/*
-		 * for(int i=0;i<lst1.size();i++) { System.out.println(lst1.get(i)); }
-		 */
 		return lst1;
 	}
 	
@@ -70,6 +58,10 @@ public class BaseTest {
 			}
 		}
 		return map;
+	}
+	
+	final public void disp() {
+		System.out.println("I am BaseTest");
 	}
 	
 
