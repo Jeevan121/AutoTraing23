@@ -64,5 +64,9 @@ public class BaseTest {
 		System.out.println("I am BaseTest");
 	}
 	
+	public  void show121() {
+		System.out.println("i am in show121 method");
+	}
+	
 
 }
