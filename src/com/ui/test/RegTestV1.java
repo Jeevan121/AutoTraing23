@@ -1,32 +1,29 @@
 package com.ui.test;
 
-import java.time.Duration;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class RegTest {
+
+import com.utils.BaseTest;
+
+
+public class RegTestV1 {
 	
 	public static void main(String[] args) throws InterruptedException {
 		
-		System.setProperty("webdriver.chrome.driver","D:\\auto_test_demo\\AutoTraing23\\driver\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		driver.get("https://parabank.parasoft.com/parabank/index.htm");
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+		BaseTest obj = new BaseTest();
+		
+		WebDriver driver =obj.launchApp("https://parabank.parasoft.com/parabank/index.htm");
 		
 		driver.findElement(By.linkText("Register")).click();
-		//Thread.sleep(1000);//our script execution
+	
 		
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
-		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("customer.firstName"))));
-		
+		obj.waitForElementTobeVisble(driver,driver.findElement(By.id("customer.firstName")));
 		driver.findElement(By.id("customer.firstName")).sendKeys("Auto");
+		
+		obj.waitForElementTobeVisble(driver,driver.findElement(By.id("customer.lastName")));
 		driver.findElement(By.id("customer.lastName")).sendKeys("Test");
+		
 		driver.findElement(By.name("customer.address.street")).sendKeys("Mumbai");
 		driver.findElement(By.xpath("//input[@id='customer.address.city']")).sendKeys("Bangalore");
 		driver.findElement(By.id("customer.address.state")).sendKeys("Karnataka");
@@ -38,8 +35,7 @@ public class RegTest {
 		driver.findElement(By.id("repeatedPassword")).sendKeys("Pass@123");
 		
 		
-		WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(50));
-		wait1.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//input[@value='Register']"))));
+		obj.waitForElementTobeClickable(driver, driver.findElement(By.xpath("//input[@value='Register']")));
 		driver.findElement(By.xpath("//input[@value='Register']")).click();
 		
 		
