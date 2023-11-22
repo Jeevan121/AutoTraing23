@@ -11,7 +11,7 @@ public class LoginPageV1 {
 			PageFactory.initElements(driver, this);
 		}
 		
-	
+
 	
 	  @FindBy(xpath="//input[@placeholder='Username']")
 	  WebElement userNameTxt; 

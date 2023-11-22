@@ -12,18 +12,16 @@ public class LoginPage {
 
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
-		PageFactory.initElements(driver, this);
+	
 	}
 		
 	  By userName = By.xpath("//input[@placeholder='Username']");
 	
 	  
 	  WebElement userNameTxt= driver.findElement(By.xpath("//input[@placeholder='Username']")); 
-	  
-	  @FindBy
+
 	  WebElement passwordTxt=driver.findElement(By.xpath("//input[@placeholder='Password']")); 
-	 
-	  @FindBy
+	
 	  WebElement loginBtn= driver.findElement(By.id("login-button"));
 	 
 	

@@ -12,13 +12,17 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BaseTest {
 	
-	
+	WebDriver driver;
 	public WebDriver launchApp(String url) {
 		System.setProperty("webdriver.chrome.driver","D:\\auto_test_demo\\AutoTraing23\\driver\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
+	    driver = new ChromeDriver();
 		driver.get(url);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+		return driver;
+	}
+	
+	public WebDriver getDriver() {
 		return driver;
 	}
 	
